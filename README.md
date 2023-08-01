@@ -416,3 +416,42 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
     }
   ]
   ```
+## Sucursal_automoviles
+1. Metodo: **GET**
+- Endpoint: `/reserva`
+
+  Obtener todas las reservas. **Ejemplo** de datos de salida:
+  ```js
+  [
+    {
+      "_id": 1,
+      "sucursal_id": 1,
+      "automovil_id": 1,
+      "Cantidad_Disponible": 5
+    },
+    {
+      "_id": 2,
+      "sucursal_id": 2,
+      "automovil_id": 3,
+      "Cantidad_Disponible": 3
+    },
+    {
+      "_id": 3,
+      "sucursal_id": 5,
+      "automovil_id": 2,
+      "Cantidad_Disponible": 4
+    },
+    {
+      "_id": 4,
+      "sucursal_id": 4,
+      "automovil_id": 1,
+      "Cantidad_Disponible": 4
+    },
+    {
+      "_id": 5,
+      "sucursal_id": 4,
+      "automovil_id": 5,
+      "Cantidad_Disponible": 4
+    }
+  ]
+  ```
