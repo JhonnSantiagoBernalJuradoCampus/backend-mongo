@@ -7,6 +7,7 @@ import clienteRouter from "./routes/cliente.routes.js";
 import empleadoRouter from "./routes/empleado.routes.js";
 import registroDevolucionRouter from "./routes/registroDevolucion.routes.js";
 import registroEntregaRouter from "./routes/registroEntrega.routes.js";
+import reservaRouter from "./routes/reserva.routes.js";
 
 dotenv.config();
 const app = express();
@@ -17,6 +18,7 @@ app.use("/cliente", clienteRouter);
 app.use("/empleado", empleadoRouter);
 app.use("/devolucion", registroDevolucionRouter);
 app.use("/entrega", registroEntregaRouter);
+app.use("/reserva", reservaRouter);
 
 conectarDB();
 
