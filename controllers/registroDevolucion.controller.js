@@ -1,4 +1,4 @@
-import RegistroDevoluciones from "../models/RegistroDevoluciones.js";
+import RegistroDevoluciones from "../models/RegistroDevolucion.js";
 
 const getRegistroDevoluciones = async (req,res)=>{
 

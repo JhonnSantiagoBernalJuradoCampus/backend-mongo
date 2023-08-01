@@ -5,7 +5,8 @@ import alquilerRouter from "./routes/alquiler.routes.js";
 import automovilRouter from "./routes/automovil.routes.js";
 import clienteRouter from "./routes/cliente.routes.js";
 import empleadoRouter from "./routes/empleado.routes.js";
-import registroDevolucionesRouter from "./routes/registroDevolucion.routes.js";
+import registroDevolucionRouter from "./routes/registroDevolucion.routes.js";
+import registroEntregaRouter from "./routes/registroEntrega.routes.js";
 
 dotenv.config();
 const app = express();
@@ -14,7 +15,8 @@ app.use("/alquiler", alquilerRouter);
 app.use("/automovil", automovilRouter);
 app.use("/cliente", clienteRouter);
 app.use("/empleado", empleadoRouter);
-app.use("/devolucion", registroDevolucionesRouter);
+app.use("/devolucion", registroDevolucionRouter);
+app.use("/entrega", registroEntregaRouter);
 
 conectarDB();
 
