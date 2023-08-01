@@ -3,6 +3,6 @@ import { getClientes } from "../controllers/cliente.controllers.js";
 
 const router = Router();
 
-router.use("/", getClientes);
+router.get("/", getClientes);
 
 export default router;
