@@ -1,7 +1,11 @@
 import mongoose from "mongoose";
 
 const alquilerSchema = mongoose.Schema(
-    {
+    {   
+        _id:{
+            type: Number,
+            required: true
+        },
         ID_Alquiler: {
             type: Number,
             required: true
