@@ -15,6 +15,11 @@ const automovilSchema = mongoose.Schema(
             required: true,
             trim: true
         },
+        Modelo: {
+            type: String,
+            required: true,
+            trim: true
+        },
         Anio: {
             type: Number,
             required: true
