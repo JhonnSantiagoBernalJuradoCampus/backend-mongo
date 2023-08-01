@@ -8,7 +8,7 @@ Este proyecto lo iniciamos con el proposito de aprender como realizar una conexi
 5. En la terminal ejecute el comando `npm run dev`.
 # Endpoints
 El servidor que estara utilizando es: **http://127.2.3.4:5010**
-## Alquiler
+## Alquileres
 1. Metodo: **GET**
 - Endpoint: `/alquiler`
 
@@ -67,7 +67,7 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
     }
   ]
   ```
-## Automovil
+## Automoviles
 1. Metodo: **GET**
 - Endpoint: `/automovil`
 
@@ -126,7 +126,7 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
     }
   ]
   ```
-## Cliente
+## Clientes
 1. Metodo: **GET**
 - Endpoint: `/cliente`
 
@@ -185,7 +185,7 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
     }
   ]
   ```
-## Empleado
+## Empleados
 1. Metodo: **GET**
 - Endpoint: `/empleado`
 
@@ -241,6 +241,65 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
       "Direccion": "Cr12 #12-12",
       "Telefono": 312314322,
       "Cargo": "Aseo"
+    }
+  ]
+  ```
+## Registro_devoluciones
+1. Metodo: **GET**
+- Endpoint: `/devolucion`
+
+  Obtener todos los registro_devoluciones. **Ejemplo** de datos de salida:
+  ```js
+  [
+    {
+      "_id": 1,
+      "ID_Registro": 1,
+      "alquiler_id": 1,
+      "empleado_id": 1,
+      "Fecha_Devolucion": "20/08/2023",
+      "Combustible_Devuelto": "5,16",
+      "Kilometraje_Devuelto": 4000,
+      "Monto_Adicional": "123,12"
+    },
+    {
+      "_id": 2,
+      "ID_Registro": 2,
+      "alquiler_id": 1,
+      "empleado_id": 1,
+      "Fecha_Devolucion": "30/08/2023",
+      "Combustible_Devuelto": "4,70",
+      "Kilometraje_Devuelto": 5000,
+      "Monto_Adicional": "120,12"
+    },
+    {
+      "_id": 3,
+      "ID_Registro": 3,
+      "alquiler_id": 1,
+      "empleado_id": 1,
+      "Fecha_Devolucion": "28/08/2023",
+      "Combustible_Devuelto": "12.21",
+      "Kilometraje_Devuelto": 1000,
+      "Monto_Adicional": "100.1"
+    },
+    {
+      "_id": 4,
+      "ID_Registro": 4,
+      "alquiler_id": 1,
+      "empleado_id": 1,
+      "Fecha_Devolucion": "21/08/2023",
+      "Combustible_Devuelto": "6,2",
+      "Kilometraje_Devuelto": 500,
+      "Monto_Adicional": "210.124"
+    },
+    {
+      "_id": 5,
+      "ID_Registro": 5,
+      "alquiler_id": 1,
+      "empleado_id": 1,
+      "Fecha_Devolucion": "26/08/2023",
+      "Combustible_Devuelto": "12.21",
+      "Kilometraje_Devuelto": 200,
+      "Monto_Adicional": "98.21"
     }
   ]
   ```

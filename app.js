@@ -14,7 +14,7 @@ app.use("/alquiler", alquilerRouter);
 app.use("/automovil", automovilRouter);
 app.use("/cliente", clienteRouter);
 app.use("/empleado", empleadoRouter);
-app.use("/devoluciones", registroDevolucionesRouter);
+app.use("/devolucion", registroDevolucionesRouter);
 
 conectarDB();
 
