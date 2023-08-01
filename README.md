@@ -455,3 +455,47 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
     }
   ]
   ```
+## Sucursales
+1. Metodo: **GET**
+- Endpoint: `/sucursal`
+
+  Obtener todas las sucursales. **Ejemplo** de datos de salida:
+  ```js
+  [
+    {
+      "_id": 1,
+      "ID_sucursal": 1,
+      "Nombre": "Zona Franca",
+      "Direccion": "Florida",
+      "Telefono": 987654321
+    },
+    {
+      "_id": 2,
+      "ID_sucursal": 2,
+      "Nombre": "Mexico",
+      "Direccion": "City Mecico",
+      "Telefono": 123457632
+    },
+    {
+      "_id": 3,
+      "ID_sucursal": 3,
+      "Nombre": "Barcelona",
+      "Direccion": "España",
+      "Telefono": 312441312
+    },
+    {
+      "_id": 4,
+      "ID_sucursal": 4,
+      "Nombre": "Irlanda",
+      "Direccion": "Argentina",
+      "Telefono": 432943212
+    },
+    {
+      "_id": 5,
+      "ID_sucursal": 5,
+      "Nombre": "Miami",
+      "Direccion": "EEUU",
+      "Telefono": 754532344
+    }
+  ]
+  ```
