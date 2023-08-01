@@ -418,9 +418,9 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
   ```
 ## Sucursal_automoviles
 1. Metodo: **GET**
-- Endpoint: `/reserva`
+- Endpoint: `/sucu_auto`
 
-  Obtener todas las reservas. **Ejemplo** de datos de salida:
+  Obtener todas las sucursal_automoviles. **Ejemplo** de datos de salida:
   ```js
   [
     {
