@@ -1,9 +1,12 @@
 import express from "express";
 import dotenv from "dotenv";
 import conectarDB from "./config/config.js";
+import alquilerRouter from "./routes/alquiler.routes.js";
 
 dotenv.config();
 const app = express();
+
+app.use("/alquiler", alquilerRouter);
 
 conectarDB();
 
