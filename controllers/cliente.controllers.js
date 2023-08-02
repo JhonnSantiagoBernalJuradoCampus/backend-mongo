@@ -7,4 +7,13 @@ const getClientes = async (req,res)=>{
     res.json(clientes);
 };
 
-export {getClientes};
+const getClienteId = async (req,res)=>{
+    
+    const parametro = req.params.id;
+
+    const cliente = await Cliente.find({_id: {$eq: parametro}});
+
+    res.json(cliente);
+}
+
+export {getClientes, getClienteId};

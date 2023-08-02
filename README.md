@@ -69,7 +69,7 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
   ```
 - Enpoint: `/alquiler/:id`
   
-  Debera **cambiar** el `id` por un numero.
+  Debera **cambiar** el `:id` por un numero.
 
   Obtener un alquiler en especifico por medio del id. **Ejemplo** de dato de salida con `id`: 4
   ```js
@@ -147,7 +147,7 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
   ```
 - Enpoint: `/automovil/:id`
   
-  Debera **cambiar** el `id` por un numero.
+  Debera **cambiar** el `:id` por un numero.
   
   Obtener un automovil en especifico por medio del id. **Ejemplo** de dato de salida con `id`: 2
   ```js
@@ -220,6 +220,25 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
       "Direccion": "Cr 20 #10-10",
       "Telefono": 3166010786,
       "Email": "angelaesperanza@gmail.com"
+    }
+  ]
+  ```
+- Enpoint: `/cliente/:id`
+
+  Debera **cambiar** el `:id` por un numero.
+
+  Obtener un cliente en especifico por medio del id. **Ejemplo** de dato de salida con `id`: 1
+  ```js
+  [
+    {
+      "_id": 1,
+      "ID_Cliente": 1,
+      "Nombre": "Jhon Santiago",
+      "Apellido": "Bernal Jurado",
+      "DNI": 109821901,
+      "Direccion": "Cr 6 #90-12",
+      "Telefono": 3123860654,
+      "Email": "jbernalsantiago@gmail.com"
     }
   ]
   ```
