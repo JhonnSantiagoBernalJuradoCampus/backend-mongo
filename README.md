@@ -197,6 +197,28 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
     }
   ]
   ```
+2. Metodo: **POST**
+- Endpoint: `/automovil/add`
+  
+  El body debera ser asi:
+  ```json
+  {
+    "_id": 6,
+    "ID_Automovil": 6,
+    "Marca": "Renault",
+    "Modelo": "Renault 6",
+    "Anio": 2010,
+    "Tipo": "Carro",
+    "Capacidad": "8",
+    "Precio_Diario": "100.000"
+  }
+  ```
+  Si se agregan los datos correctamente deberá devolver:
+  ```json
+  {
+    "message": "Agregado con exito"
+  }
+  ```
 ## Clientes
 1. Metodo: **GET**
 - Endpoint: `/cliente`
