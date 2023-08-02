@@ -274,6 +274,33 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
     "message": "Agregado con exito"
   }
   ```
+3. Metodo: **PUT**
+
+- Endpoint: `/automovil/upd/:id`
+  
+  Debe cambiar el parametro `:id` por un numero
+
+  Ejemplo cuando el `id` es 6:
+
+  El body debera ser asi:
+  ```json
+  {
+    "Marca": "Renault",
+    "Modelo": "Renault 200",
+    "Anio": 2013,
+    "Tipo": "Moto",
+    "Capacidad": 5,
+    "Precio_Diario": "300.000"
+  }
+  ```
+
+  Si se actualizan los datos correctamente deberá devolver:
+
+  ```json
+  {
+    "message": "Actualizado con exito"
+  }
+  ```
 
 ## Clientes
 

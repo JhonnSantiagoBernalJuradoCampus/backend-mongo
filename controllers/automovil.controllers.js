@@ -27,6 +27,35 @@ const postAutomovil = async (req,res)=>{
     } catch (error) {
         res.send({message: "Error al subir dato"})
     }
+};
+
+const putAutomovil = async (req,res)=>{
+    try {
+        const automovil = await Automovil.findOne({_id: req.params.id});
+
+        if(req.body.Marca){
+            automovil.Marca = req.body.Marca
+        }
+        if(req.body.Modelo){
+            automovil.Modelo = req.body.Modelo
+        }
+        if(req.body.Anio){
+            automovil.Anio = req.body.Anio
+        }
+        if(req.body.Tipo){
+            automovil.Tipo = req.body.Tipo
+        }
+        if(req.body.Capacidad){
+            automovil.Capacidad = req.body.Capacidad
+        }
+        if(req.body.Precio_Diario) {
+            automovil.Precio_Diario = req.body.Precio_Diario
+        }
+        await automovil.save();
+        res.status(201).send({message: "Actualizado con exito"})
+    } catch (error) {
+        res.status(404).send({message: "automovil no existe"});
+    }
 }
 
-export {getAutomoviles, getAutomovilId, postAutomovil};
+export {getAutomoviles, getAutomovilId, postAutomovil, putAutomovil};
