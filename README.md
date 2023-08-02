@@ -529,6 +529,25 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
     }
   ]
   ```
+- Enpoint: `/reserva/:id`
+
+  Debera **cambiar** el `:id` por un numero.
+
+  Obtener una reserva en especifico por medio del id. **Ejemplo** de dato de salida con `id`: 1
+  ```js
+  [
+    {
+      "_id": 1,
+      "ID_Reserva": 1,
+      "cliente_id": 2,
+      "automovil_id": 1,
+      "Fecha_Reserva": "11/08/2023",
+      "Fecha_Inicio": "18/08/2023",
+      "Fecha_Fin": "20/08/2023",
+      "Estado": "Pendiente"
+    }
+  ]
+  ```
 ## Sucursal_automoviles
 1. Metodo: **GET**
 - Endpoint: `/sucu_auto`

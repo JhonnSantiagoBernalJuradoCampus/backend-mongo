@@ -7,4 +7,13 @@ const getReservas = async (req,res)=>{
     res.json(reservas);
 };
 
-export {getReservas};
+const getReservaId = async (req,res)=>{
+
+    const parametro = req.params.id;
+
+    const reserva = await Reserva.find({_id: {$eq: parametro}});
+    
+    res.json(reserva);
+};
+
+export {getReservas, getReservaId};
