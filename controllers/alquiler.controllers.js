@@ -7,4 +7,13 @@ const getAlquileres = async (req,res)=>{
     res.json(alquileres);
 };
 
-export {getAlquileres}
+const getAlquilerId = async (req,res)=>{
+
+    const parametro = req.params.id;
+    
+    const alquiler = await Alquiler.find({_id: {$eq: parametro}});
+
+    res.json(alquiler);
+}
+
+export {getAlquileres, getAlquilerId}
