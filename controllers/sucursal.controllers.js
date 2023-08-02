@@ -7,4 +7,13 @@ const getSucursales = async (req,res) =>{
     res.json(sucursales);
 };
 
-export {getSucursales};
+const getSucursalId = async (req,res)=>{
+
+    const parametro = req.params.id;
+
+    const sucursal = await Sucursal.find({_id: {$eq: parametro}});
+
+    res.json(sucursal);
+};
+
+export {getSucursales, getSucursalId};

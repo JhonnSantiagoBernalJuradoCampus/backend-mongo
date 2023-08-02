@@ -631,3 +631,19 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
     }
   ]
   ```
+- Enpoint: `/sucursal/:id`
+
+  Debera **cambiar** el `:id` por un numero.
+
+  Obtener una sucursal en especifico por medio del id. **Ejemplo** de dato de salida con `id`: 2
+  ```js
+  [
+    {
+      "_id": 2,
+      "ID_sucursal": 2,
+      "Nombre": "Mexico",
+      "Direccion": "City Mecico",
+      "Telefono": 123457632
+    }
+  ]
+  ```
