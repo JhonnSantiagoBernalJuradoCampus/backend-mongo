@@ -1,18 +1,27 @@
 # Conexion a MongoDB
+
 Este proyecto lo iniciamos con el proposito de aprender como realizar una conexion a mongo desde express
+
 # Instalacion
+
 1. Debe clonar el repositorio: `https://github.com/JhonnSantiagoBernalJuradoCampus/backend-mongo.git`
 2. Debe abrir la terminal de su editor de codigo ejecutar el comando `npm i`
 3. Al archivo `.env.example` cambiele el nombre a `.env`
-4. Debe cambiar el  `<password>` en el archivo .env a la super contraseña `12345`
+4. Debe cambiar el `<password>` en el archivo .env a la super contraseña `12345`
 5. En la terminal ejecute el comando `npm run dev`.
+
 # Endpoints
+
 El servidor que estara utilizando es: **http://127.2.3.4:5010**
+
 ## Alquileres
+
 1. Metodo: **GET**
+
 - Endpoint: `/alquiler`
 
   Obtener todos los alquileres. **Ejemplo** de datos de salida:
+
   ```json
   [
     {
@@ -67,11 +76,13 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
     }
   ]
   ```
+
 - Enpoint: `/alquiler/:id`
-  
+
   Debera **cambiar** el `:id` por un numero.
 
   Obtener un alquiler en especifico por medio del id. **Ejemplo** de dato de salida con `id`: 4
+
   ```json
   [
     {
@@ -86,10 +97,13 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
     }
   ]
   ```
+
 2. Metodo: **POST**
+
 - Endpoint: `/alquiler/add`
-  
+
   El body debera ser asi:
+
   ```json
   {
     "_id": 6,
@@ -102,28 +116,62 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
     "Estado": "Disponible"
   }
   ```
+
   Si se agregan los datos correctamente deberá devolver:
+
   ```json
   {
     "message": "Agregado con exito"
   }
   ```
-3. Metodo: **DELETE**
-- Enpoint: `/alquiler/delete/:id`
+3. Metodo: **PUT**
+
+- Endpoint: `/alquiler/upd/:id`
   
-  Debe cambiar el parametro `:id` por un numero:
-  
+  Debe cambiar el parametro `:id` por un numero
+
   Ejemplo cuando el `id` es 6:
+
+  El body debera ser asi:
+  ```json
+  {
+    "cliente_id": 2,
+    "automovil_id": 3,
+    "Fecha_Inicio": "20/08/2023",
+    "Fecha_Fin": "23/08/2023",
+    "Costo_Total": "500.000",
+    "Estado": "Alquilado"
+  }
+  ```
+
+  Si se actualizan los datos correctamente deberá devolver:
+
+  ```json
+  {
+    "message": "Actualizado con exito"
+  }
+  ```
+4. Metodo: **DELETE**
+
+- Enpoint: `/alquiler/delete/:id`
+
+  Debe cambiar el parametro `:id` por un numero:
+
+  Ejemplo cuando el `id` es 6:
+
   ```json
   {
     "message": "Eliminado correctamente"
   }
   ```
 ## Automoviles
+
 1. Metodo: **GET**
+
 - Endpoint: `/automovil`
 
   Obtener todos los automoviles. **Ejemplo** de datos de salida:
+
   ```json
   [
     {
@@ -178,11 +226,13 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
     }
   ]
   ```
+
 - Enpoint: `/automovil/:id`
-  
+
   Debera **cambiar** el `:id` por un numero.
-  
+
   Obtener un automovil en especifico por medio del id. **Ejemplo** de dato de salida con `id`: 2
+
   ```json
   [
     {
@@ -197,10 +247,13 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
     }
   ]
   ```
+
 2. Metodo: **POST**
+
 - Endpoint: `/automovil/add`
-  
+
   El body debera ser asi:
+
   ```json
   {
     "_id": 6,
@@ -213,17 +266,23 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
     "Precio_Diario": "100.000"
   }
   ```
+
   Si se agregan los datos correctamente deberá devolver:
+
   ```json
   {
     "message": "Agregado con exito"
   }
   ```
+
 ## Clientes
+
 1. Metodo: **GET**
+
 - Endpoint: `/cliente`
 
   Obtener todos los clientes. **Ejemplo** de datos de salida:
+
   ```json
   [
     {
@@ -278,11 +337,13 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
     }
   ]
   ```
+
 - Enpoint: `/cliente/:id`
 
   Debera **cambiar** el `:id` por un numero.
 
   Obtener un cliente en especifico por medio del id. **Ejemplo** de dato de salida con `id`: 1
+
   ```json
   [
     {
@@ -297,11 +358,15 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
     }
   ]
   ```
+
 ## Empleados
+
 1. Metodo: **GET**
+
 - Endpoint: `/empleado`
 
   Obtener todos los empleados. **Ejemplo** de datos de salida:
+
   ```json
   [
     {
@@ -356,11 +421,13 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
     }
   ]
   ```
+
 - Enpoint: `/empleado/:id`
 
   Debera **cambiar** el `:id` por un numero.
 
   Obtener un empleado en especifico por medio del id. **Ejemplo** de dato de salida con `id`: 5
+
   ```json
   [
     {
@@ -375,11 +442,15 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
     }
   ]
   ```
+
 ## Registro_devoluciones
+
 1. Metodo: **GET**
+
 - Endpoint: `/devolucion`
 
   Obtener todos los registro_devoluciones. **Ejemplo** de datos de salida:
+
   ```json
   [
     {
@@ -434,11 +505,13 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
     }
   ]
   ```
+
 - Enpoint: `/devolucion/:id`
 
   Debera **cambiar** el `:id` por un numero.
 
   Obtener un registro_devolucion en especifico por medio del id. **Ejemplo** de dato de salida con `id`: 1
+
   ```json
   [
     {
@@ -453,11 +526,15 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
     }
   ]
   ```
+
 ## Registro_entregas
+
 1. Metodo: **GET**
+
 - Endpoint: `/entrega`
 
   Obtener todos los registro_entregas. **Ejemplo** de datos de salida:
+
   ```json
   [
     {
@@ -507,11 +584,13 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
     }
   ]
   ```
+
 - Enpoint: `/entrega/:id`
 
   Debera **cambiar** el `:id` por un numero.
 
   Obtener un registro_entrega en especifico por medio del id. **Ejemplo** de dato de salida con `id`: 3
+
   ```json
   [
     {
@@ -525,11 +604,15 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
     }
   ]
   ```
+
 ## Reservas
+
 1. Metodo: **GET**
+
 - Endpoint: `/reserva`
 
   Obtener todas las reservas. **Ejemplo** de datos de salida:
+
   ```json
   [
     {
@@ -584,11 +667,13 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
     }
   ]
   ```
+
 - Enpoint: `/reserva/:id`
 
   Debera **cambiar** el `:id` por un numero.
 
   Obtener una reserva en especifico por medio del id. **Ejemplo** de dato de salida con `id`: 1
+
   ```json
   [
     {
@@ -603,11 +688,15 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
     }
   ]
   ```
+
 ## Sucursal_automoviles
+
 1. Metodo: **GET**
+
 - Endpoint: `/sucu_auto`
 
   Obtener todas las sucursal_automoviles. **Ejemplo** de datos de salida:
+
   ```json
   [
     {
@@ -642,11 +731,13 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
     }
   ]
   ```
+
 - Enpoint: `/sucu_auto/:id`
 
   Debera **cambiar** el `:id` por un numero.
 
   Obtener una sucursal_automovil en especifico por medio del id. **Ejemplo** de dato de salida con `id`: 1
+
   ```json
   [
     {
@@ -657,11 +748,15 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
     }
   ]
   ```
+
 ## Sucursales
+
 1. Metodo: **GET**
+
 - Endpoint: `/sucursal`
 
   Obtener todas las sucursales. **Ejemplo** de datos de salida:
+
   ```json
   [
     {
@@ -701,11 +796,13 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
     }
   ]
   ```
+
 - Enpoint: `/sucursal/:id`
 
   Debera **cambiar** el `:id` por un numero.
 
   Obtener una sucursal en especifico por medio del id. **Ejemplo** de dato de salida con `id`: 2
+
   ```json
   [
     {
