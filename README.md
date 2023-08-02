@@ -452,6 +452,24 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
     }
   ]
   ```
+- Enpoint: `/entrega/:id`
+
+  Debera **cambiar** el `:id` por un numero.
+
+  Obtener un registro_entrega en especifico por medio del id. **Ejemplo** de dato de salida con `id`: 3
+  ```js
+  [
+    {
+      "_id": 3,
+      "ID_Registro": 3,
+      "alquiler_id": 1,
+      "empleado_id": 1,
+      "Fecha_Entrega": "26/08/2023",
+      "Combustible_Entregado": "12,5",
+      "Kilometraje_Entregado": 100
+    }
+  ]
+  ```
 ## Reservas
 1. Metodo: **GET**
 - Endpoint: `/reserva`

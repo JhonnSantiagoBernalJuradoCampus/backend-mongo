@@ -7,4 +7,13 @@ const getRegistroEntregas = async (req,res)=>{
     res.json(registroEntregas);
 };
 
-export {getRegistroEntregas};
+const getRegistroEntregaId = async (req,res)=>{
+
+    const parametro = req.params.id;
+
+    const entrega = await RegistroEntregas.find({_id: parametro});
+
+    res.json(entrega);
+};
+
+export {getRegistroEntregas, getRegistroEntregaId};

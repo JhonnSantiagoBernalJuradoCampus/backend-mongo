@@ -1,8 +1,9 @@
 import { Router } from "express";
-import { getRegistroEntregas } from "../controllers/registroEntrega.controller.js";
+import { getRegistroEntregas, getRegistroEntregaId } from "../controllers/registroEntrega.controller.js";
 
 const routes = Router();
 
 routes.get("/", getRegistroEntregas);
+routes.get("/:id", getRegistroEntregaId);
 
 export default routes;
