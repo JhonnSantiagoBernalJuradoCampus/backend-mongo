@@ -58,4 +58,14 @@ const putAutomovil = async (req,res)=>{
     }
 }
 
-export {getAutomoviles, getAutomovilId, postAutomovil, putAutomovil};
+const deleteAutomovil = async (req,res)=>{
+    try {
+        await Automovil.deleteOne({_id: req.params.id});
+
+        res.status(202).send({message: "Eliminado correctamente"})
+    } catch (error) {
+        res.status(404).send({message: error});
+    }
+}
+
+export {getAutomoviles, getAutomovilId, postAutomovil, putAutomovil, deleteAutomovil};

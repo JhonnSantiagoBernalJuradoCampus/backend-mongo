@@ -301,6 +301,18 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
     "message": "Actualizado con exito"
   }
   ```
+4. Metodo: **DELETE**
+
+- Enpoint: `/automovil/delete/:id`
+
+  Debe cambiar el parametro `:id` por un numero:
+
+  Ejemplo cuando el `id` es 6:
+
+  ```json
+  {
+    "message": "Eliminado correctamente"
+  }
 
 ## Clientes
 
