@@ -14,6 +14,8 @@ import sucursalRouter from "./routes/sucursal.routes.js";
 dotenv.config();
 const app = express();
 
+app.use(express.json());
+
 app.use("/alquiler", alquilerRouter);
 app.use("/automovil", automovilRouter);
 app.use("/cliente", clienteRouter);

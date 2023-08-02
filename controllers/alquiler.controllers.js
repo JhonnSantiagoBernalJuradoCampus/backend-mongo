@@ -16,4 +16,17 @@ const getAlquilerId = async (req,res)=>{
     res.json(alquiler);
 }
 
-export {getAlquileres, getAlquilerId}
+const postAlquiler = async (req,res)=>{
+
+    const alquiler = new Alquiler(req.body);
+
+    try{
+        const nuevoAlquiler = await alquiler.save();
+
+        res.json(nuevoAlquiler);
+    }catch (error){
+        console.log(error);
+    }
+}
+
+export {getAlquileres, getAlquilerId, postAlquiler};

@@ -36,7 +36,7 @@ const clienteSchema = mongoose.Schema(
         }
     },
     {
-        timestamps: true
+        versionKey: false
     }
 );
 

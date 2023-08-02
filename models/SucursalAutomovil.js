@@ -20,7 +20,7 @@ const sucursalAutomovilSchema = mongoose.Schema(
         }
     },
     {
-        timestamps: true
+        versionKey: false
     }
 );
 

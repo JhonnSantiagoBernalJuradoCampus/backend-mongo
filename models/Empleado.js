@@ -36,7 +36,7 @@ const empleadoSchema = mongoose.Schema(
         }
     },
     {
-        timestamps: true
+        versionKey: false
     }
 );
 

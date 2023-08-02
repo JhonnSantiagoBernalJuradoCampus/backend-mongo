@@ -32,7 +32,7 @@ const registroEntregaSchema = mongoose.Schema(
         }
     },
     {
-        timestamps: true
+        versionKey: false
     }
 );
 

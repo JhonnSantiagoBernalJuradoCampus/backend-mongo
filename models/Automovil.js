@@ -40,7 +40,7 @@ const automovilSchema = mongoose.Schema(
         }
     },
     {
-        timestamps: true
+        versionKey: false
     }
 );
 

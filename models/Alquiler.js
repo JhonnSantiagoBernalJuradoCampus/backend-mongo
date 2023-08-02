@@ -40,7 +40,7 @@ const alquilerSchema = mongoose.Schema(
         },
     },
     {
-        timestamps: true
+        versionKey: false
     }
 );
 
