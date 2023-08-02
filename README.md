@@ -301,6 +301,25 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
     }
   ]
   ```
+- Enpoint: `/empleado/:id`
+
+  Debera **cambiar** el `:id` por un numero.
+
+  Obtener un empleado en especifico por medio del id. **Ejemplo** de dato de salida con `id`: 5
+  ```js
+  [
+    {
+      "_id": 5,
+      "ID_Empleado": 5,
+      "Nombre": "Andres",
+      "Apellido": "Sepulveda",
+      "DNI": 65423442,
+      "Direccion": "Cr12 #12-12",
+      "Telefono": 312314322,
+      "Cargo": "Vendedor"
+    }
+  ]
+  ```
 ## Registro_devoluciones
 1. Metodo: **GET**
 - Endpoint: `/devolucion`
