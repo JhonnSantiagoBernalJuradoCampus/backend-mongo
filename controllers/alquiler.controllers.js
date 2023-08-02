@@ -23,7 +23,7 @@ const postAlquiler = async (req,res)=>{
     try{
         const nuevoAlquiler = await alquiler.save();
 
-        res.json(nuevoAlquiler);
+        res.status(201).send({message: "Agregado con exito"});
     }catch (error){
         console.log(error);
     }

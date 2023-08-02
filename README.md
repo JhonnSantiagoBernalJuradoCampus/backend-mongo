@@ -13,7 +13,7 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
 - Endpoint: `/alquiler`
 
   Obtener todos los alquileres. **Ejemplo** de datos de salida:
-  ```js
+  ```json
   [
     {
       "_id": 1,
@@ -72,7 +72,7 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
   Debera **cambiar** el `:id` por un numero.
 
   Obtener un alquiler en especifico por medio del id. **Ejemplo** de dato de salida con `id`: 4
-  ```js
+  ```json
   [
     {
       "_id": 4,
@@ -86,12 +86,34 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
     }
   ]
   ```
+2. Metodo: **POST**
+- Endpoint: `alquiler/add`
+  
+  El body debera ser asi:
+  ```json
+  {
+    "_id": 6,
+    "ID_Alquiler": 6,
+    "cliente_id": 1,
+    "automovil_id": 1,
+    "Fecha_Inicio": "29/08/2023",
+    "Fecha_Fin": "30/08/2023",
+    "Costo_Total": "900.000",
+    "Estado": "Disponible"
+  }
+  ```
+  Si se agregan los datos correctamente deberá devolver:
+  ```json
+  {
+    "message": "Agregado con exito"
+  }
+  ```
 ## Automoviles
 1. Metodo: **GET**
 - Endpoint: `/automovil`
 
   Obtener todos los automoviles. **Ejemplo** de datos de salida:
-  ```js
+  ```json
   [
     {
       "_id": 1,
@@ -150,7 +172,7 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
   Debera **cambiar** el `:id` por un numero.
   
   Obtener un automovil en especifico por medio del id. **Ejemplo** de dato de salida con `id`: 2
-  ```js
+  ```json
   [
     {
       "_id": 2,
@@ -169,7 +191,7 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
 - Endpoint: `/cliente`
 
   Obtener todos los clientes. **Ejemplo** de datos de salida:
-  ```js
+  ```json
   [
     {
       "_id": 1,
@@ -228,7 +250,7 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
   Debera **cambiar** el `:id` por un numero.
 
   Obtener un cliente en especifico por medio del id. **Ejemplo** de dato de salida con `id`: 1
-  ```js
+  ```json
   [
     {
       "_id": 1,
@@ -247,7 +269,7 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
 - Endpoint: `/empleado`
 
   Obtener todos los empleados. **Ejemplo** de datos de salida:
-  ```js
+  ```json
   [
     {
       "_id": 1,
@@ -306,7 +328,7 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
   Debera **cambiar** el `:id` por un numero.
 
   Obtener un empleado en especifico por medio del id. **Ejemplo** de dato de salida con `id`: 5
-  ```js
+  ```json
   [
     {
       "_id": 5,
@@ -325,7 +347,7 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
 - Endpoint: `/devolucion`
 
   Obtener todos los registro_devoluciones. **Ejemplo** de datos de salida:
-  ```js
+  ```json
   [
     {
       "_id": 1,
@@ -384,7 +406,7 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
   Debera **cambiar** el `:id` por un numero.
 
   Obtener un registro_devolucion en especifico por medio del id. **Ejemplo** de dato de salida con `id`: 1
-  ```js
+  ```json
   [
     {
       "_id": 1,
@@ -403,7 +425,7 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
 - Endpoint: `/entrega`
 
   Obtener todos los registro_entregas. **Ejemplo** de datos de salida:
-  ```js
+  ```json
   [
     {
       "_id": 1,
@@ -457,7 +479,7 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
   Debera **cambiar** el `:id` por un numero.
 
   Obtener un registro_entrega en especifico por medio del id. **Ejemplo** de dato de salida con `id`: 3
-  ```js
+  ```json
   [
     {
       "_id": 3,
@@ -475,7 +497,7 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
 - Endpoint: `/reserva`
 
   Obtener todas las reservas. **Ejemplo** de datos de salida:
-  ```js
+  ```json
   [
     {
       "_id": 1,
@@ -534,7 +556,7 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
   Debera **cambiar** el `:id` por un numero.
 
   Obtener una reserva en especifico por medio del id. **Ejemplo** de dato de salida con `id`: 1
-  ```js
+  ```json
   [
     {
       "_id": 1,
@@ -553,7 +575,7 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
 - Endpoint: `/sucu_auto`
 
   Obtener todas las sucursal_automoviles. **Ejemplo** de datos de salida:
-  ```js
+  ```json
   [
     {
       "_id": 1,
@@ -592,7 +614,7 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
   Debera **cambiar** el `:id` por un numero.
 
   Obtener una sucursal_automovil en especifico por medio del id. **Ejemplo** de dato de salida con `id`: 1
-  ```js
+  ```json
   [
     {
       "_id": 1,
@@ -607,7 +629,7 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
 - Endpoint: `/sucursal`
 
   Obtener todas las sucursales. **Ejemplo** de datos de salida:
-  ```js
+  ```json
   [
     {
       "_id": 1,
@@ -651,7 +673,7 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
   Debera **cambiar** el `:id` por un numero.
 
   Obtener una sucursal en especifico por medio del id. **Ejemplo** de dato de salida con `id`: 2
-  ```js
+  ```json
   [
     {
       "_id": 2,
