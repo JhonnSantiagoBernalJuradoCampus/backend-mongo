@@ -587,6 +587,21 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
     }
   ]
   ```
+- Enpoint: `/sucu_auto/:id`
+
+  Debera **cambiar** el `:id` por un numero.
+
+  Obtener una sucursal_automovil en especifico por medio del id. **Ejemplo** de dato de salida con `id`: 1
+  ```js
+  [
+    {
+      "_id": 1,
+      "sucursal_id": 1,
+      "automovil_id": 1,
+      "Cantidad_Disponible": 5
+    }
+  ]
+  ```
 ## Sucursales
 1. Metodo: **GET**
 - Endpoint: `/sucursal`
