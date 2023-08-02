@@ -67,6 +67,25 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
     }
   ]
   ```
+- Enpoint: `/alquiler/:id`
+  
+  Debera **cambiar** el `id` por un numero.
+  
+  Obtener un alquiler en especifico por medio del id. **Ejemplo** de dato de salida con `id`: 4
+  ```js
+  [
+    {
+      "_id": 4,
+      "ID_Alquiler": 4,
+      "cliente_id": 3,
+      "automovil_id": 4,
+      "Fecha_Inicio": "2023-08-22",
+      "Fecha_Fin": "2023-08-24",
+      "Costo_Total": "800.000",
+      "Estado": "Alquilado"
+    }
+  ]
+  ```
 ## Automoviles
 1. Metodo: **GET**
 - Endpoint: `/automovil`
