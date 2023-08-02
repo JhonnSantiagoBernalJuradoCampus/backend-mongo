@@ -29,4 +29,15 @@ const postAlquiler = async (req,res)=>{
     }
 }
 
-export {getAlquileres, getAlquilerId, postAlquiler};
+const deleteAlquiler = async (req,res)=>{
+    try {
+        const parametro = req.params.id;
+        await Alquiler.deleteOne({_id: {$eq: parametro}});
+        
+        res.json({message: `Eliminado correctamente`});
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+export {getAlquileres, getAlquilerId, postAlquiler, deleteAlquiler};

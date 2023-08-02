@@ -87,7 +87,7 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
   ]
   ```
 2. Metodo: **POST**
-- Endpoint: `alquiler/add`
+- Endpoint: `/alquiler/add`
   
   El body debera ser asi:
   ```json
@@ -106,6 +106,17 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
   ```json
   {
     "message": "Agregado con exito"
+  }
+  ```
+3. Metodo: **DELETE**
+- Enpoint: `/alquiler/delete/:id`
+  
+  Debe cambiar el parametro `:id` por un numero:
+  
+  Ejemplo cuando el `id` es 6:
+  ```json
+  {
+    "message": "Eliminado correctamente"
   }
   ```
 ## Automoviles
