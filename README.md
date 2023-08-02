@@ -20,50 +20,50 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
       "ID_Alquiler": 1,
       "cliente_id": 1,
       "automovil_id": 1,
-      "Fecha_Inicio": "19/08/2023",
-      "Fecha_Fin": "21/08/2023",
+      "Fecha_Inicio": "2023-08-19",
+      "Fecha_Fin": "2023-08-21",
       "Costo_Total": "600.000",
       "Estado": "Alquilado"
     },
     {
       "_id": 2,
       "ID_Alquiler": 2,
-      "cliente_id": 1,
-      "automovil_id": 1,
-      "Fecha_Inicio": "20/08/2023",
-      "Fecha_Fin": "22/08/2023",
+      "cliente_id": 2,
+      "automovil_id": 2,
+      "Fecha_Inicio": "2023-08-20",
+      "Fecha_Fin": "2023-08-22",
       "Costo_Total": "400.000",
-      "Estado": "Alquilado"
+      "Estado": "Disponible"
     },
     {
       "_id": 3,
       "ID_Alquiler": 3,
       "cliente_id": 1,
-      "automovil_id": 1,
-      "Fecha_Inicio": "21/08/2023",
-      "Fecha_Fin": "23/08/2023",
+      "automovil_id": 3,
+      "Fecha_Inicio": "2023-07-05",
+      "Fecha_Fin": "2023-08-21",
       "Costo_Total": "500.000",
-      "Estado": "Alquilado"
+      "Estado": "Disponible"
     },
     {
       "_id": 4,
       "ID_Alquiler": 4,
-      "cliente_id": 1,
-      "automovil_id": 1,
-      "Fecha_Inicio": "22/08/2023",
-      "Fecha_Fin": "24/08/2023",
+      "cliente_id": 3,
+      "automovil_id": 4,
+      "Fecha_Inicio": "2023-08-22",
+      "Fecha_Fin": "2023-08-24",
       "Costo_Total": "800.000",
       "Estado": "Alquilado"
     },
     {
       "_id": 5,
       "ID_Alquiler": 5,
-      "cliente_id": 1,
-      "automovil_id": 1,
-      "Fecha_Inicio": "24/08/2023",
-      "Fecha_Fin": "27/08/2023",
+      "cliente_id": 4,
+      "automovil_id": 5,
+      "Fecha_Inicio": "2023-08-24",
+      "Fecha_Fin": "2023-08-27",
       "Costo_Total": "900.000",
-      "Estado": "Alquilado"
+      "Estado": "Disponible"
     }
   ]
   ```
@@ -100,7 +100,7 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
       "Modelo": "Renault Sandero",
       "Anio": 2023,
       "Tipo": "Carro",
-      "Capacidad": "4 personas",
+      "Capacidad": "4",
       "Precio_Diario": "500.000"
     },
     {
@@ -110,7 +110,7 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
       "Modelo": "Renault 123",
       "Anio": 2020,
       "Tipo": "Carro",
-      "Capacidad": "4 personas",
+      "Capacidad": "6",
       "Precio_Diario": "300.000"
     },
     {
@@ -120,7 +120,7 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
       "Modelo": "Renault 321",
       "Anio": 2021,
       "Tipo": "Carro",
-      "Capacidad": "4 personas",
+      "Capacidad": "7",
       "Precio_Diario": "122.000"
     },
     {
@@ -130,7 +130,7 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
       "Modelo": "Renault 432",
       "Anio": 2010,
       "Tipo": "Carro",
-      "Capacidad": "5 personas",
+      "Capacidad": "5",
       "Precio_Diario": "600.000"
     },
     {
@@ -140,7 +140,7 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
       "Modelo": "Renault 543",
       "Anio": 2019,
       "Tipo": "Carro",
-      "Capacidad": "4 personas",
+      "Capacidad": "4",
       "Precio_Diario": "102.000"
     }
   ]
@@ -257,7 +257,7 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
       "DNI": 91514559,
       "Direccion": "Cr8 #12-12",
       "Telefono": 3127141832,
-      "Cargo": "Jefe de almacen"
+      "Cargo": "Vendedor"
     },
     {
       "_id": 2,
@@ -267,7 +267,7 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
       "DNI": 84392389,
       "Direccion": "Cr4 #20-40",
       "Telefono": 3124234876,
-      "Cargo": "Trainer"
+      "Cargo": "Gerente"
     },
     {
       "_id": 3,
@@ -277,7 +277,7 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
       "DNI": 64432341,
       "Direccion": "Cr2 #54-21",
       "Telefono": 312343245,
-      "Cargo": "Coordinador"
+      "Cargo": "Asistente"
     },
     {
       "_id": 4,
@@ -287,7 +287,7 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
       "DNI": 53423412,
       "Direccion": "Cr43 #76-98",
       "Telefono": 312334344,
-      "Cargo": "CEO"
+      "Cargo": "Asistente"
     },
     {
       "_id": 5,
@@ -297,7 +297,7 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
       "DNI": 65423442,
       "Direccion": "Cr12 #12-12",
       "Telefono": 312314322,
-      "Cargo": "Aseo"
+      "Cargo": "Vendedor"
     }
   ]
   ```
@@ -480,12 +480,12 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
     {
       "_id": 1,
       "ID_Reserva": 1,
-      "cliente_id": 1,
+      "cliente_id": 2,
       "automovil_id": 1,
       "Fecha_Reserva": "11/08/2023",
       "Fecha_Inicio": "18/08/2023",
       "Fecha_Fin": "20/08/2023",
-      "Estado": "Reservado"
+      "Estado": "Pendiente"
     },
     {
       "_id": 2,
@@ -495,12 +495,12 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
       "Fecha_Reserva": "13/08/2023",
       "Fecha_Inicio": "19/08/2023",
       "Fecha_Fin": "22/08/2023",
-      "Estado": "Reservado"
+      "Estado": "Pendiente"
     },
     {
       "_id": 3,
       "ID_Reserva": 3,
-      "cliente_id": 1,
+      "cliente_id": 5,
       "automovil_id": 1,
       "Fecha_Reserva": "15/08/2023",
       "Fecha_Inicio": "16/08/2023",
