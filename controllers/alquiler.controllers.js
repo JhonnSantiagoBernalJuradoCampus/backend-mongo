@@ -25,7 +25,7 @@ const postAlquiler = async (req,res)=>{
 
         res.status(201).send({message: "Agregado con exito"});
     }catch (error){
-        console.log(error);
+        res.send({message: "Error al subir dato"})
     }
 }
 
@@ -34,10 +34,10 @@ const deleteAlquiler = async (req,res)=>{
         const parametro = req.params.id;
         await Alquiler.deleteOne({_id: {$eq: parametro}});
         
-        res.json({message: `Eliminado correctamente`});
+        res.status(204).send({message: `Eliminado correctamente`});
     } catch (error) {
-        console.log(error);
+        res.status(404).send({message: error});
     }
-}
+};
 
 export {getAlquileres, getAlquilerId, postAlquiler, deleteAlquiler};
