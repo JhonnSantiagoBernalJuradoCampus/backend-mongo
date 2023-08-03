@@ -47,4 +47,14 @@ const putCliente = async (req,res)=>{
     }
 }
 
-export {getClientes, getClienteId, postCliente, putCliente};
+const deleteCliente = async (req,res)=>{
+    try {
+        await Cliente.deleteOne({_id: req.params.id});
+
+        res.status(202).send({message: "Eliminado correctamente"})
+    } catch (error) {
+        res.status(404).send({message: error});
+    }
+}
+
+export {getClientes, getClienteId, postCliente, putCliente, deleteCliente};
