@@ -28,4 +28,23 @@ const postCliente = async (req,res)=>{
     }
 };
 
-export {getClientes, getClienteId, postCliente};
+const putCliente = async (req,res)=>{
+    try {
+        const cliente = await Cliente.findOne({_id: req.params.id});
+        if(req.body.Direccion){
+            cliente.Direccion = req.body.Direccion;
+        }
+        if(req.body.Telefono){
+            cliente.Telefono = req.body.Telefono;
+        }
+        if(req.body.Email){
+            cliente.Email = req.body.Email;
+        }
+        await cliente.save();
+        res.status(201).send({message: "Actualizado con exito"})
+    } catch (error) {
+        res.status(404).send({error: "cliente no existe"})
+    }
+}
+
+export {getClientes, getClienteId, postCliente, putCliente};

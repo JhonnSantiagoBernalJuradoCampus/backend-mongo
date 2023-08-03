@@ -84,18 +84,16 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
   Obtener un alquiler en especifico por medio del id. **Ejemplo** de dato de salida con `id`: 4
 
   ```json
-  [
-    {
-      "_id": 4,
-      "ID_Alquiler": 4,
-      "cliente_id": 3,
-      "automovil_id": 4,
-      "Fecha_Inicio": "2023-08-22",
-      "Fecha_Fin": "2023-08-24",
-      "Costo_Total": "800.000",
-      "Estado": "Alquilado"
-    }
-  ]
+  {
+    "_id": 4,
+    "ID_Alquiler": 4,
+    "cliente_id": 3,
+    "automovil_id": 4,
+    "Fecha_Inicio": "2023-08-22",
+    "Fecha_Fin": "2023-08-24",
+    "Costo_Total": "800.000",
+    "Estado": "Alquilado"
+  }
   ```
 
 2. Metodo: **POST**
@@ -234,18 +232,16 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
   Obtener un automovil en especifico por medio del id. **Ejemplo** de dato de salida con `id`: 2
 
   ```json
-  [
-    {
-      "_id": 2,
-      "ID_Automovil": 2,
-      "Marca": "Renault",
-      "Modelo": "Renault 123",
-      "Anio": 2020,
-      "Tipo": "Carro",
-      "Capacidad": "6",
-      "Precio_Diario": "300.000"
-    }
-  ]
+  {
+    "_id": 2,
+    "ID_Automovil": 2,
+    "Marca": "Renault",
+    "Modelo": "Renault 123",
+    "Anio": 2020,
+    "Tipo": "Carro",
+    "Capacidad": "6",
+    "Precio_Diario": "300.000"
+  }
   ```
 
 2. Metodo: **POST**
@@ -384,18 +380,16 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
   Obtener un cliente en especifico por medio del id. **Ejemplo** de dato de salida con `id`: 1
 
   ```json
-  [
-    {
-      "_id": 1,
-      "ID_Cliente": 1,
-      "Nombre": "Jhon Santiago",
-      "Apellido": "Bernal Jurado",
-      "DNI": 109821901,
-      "Direccion": "Cr 6 #90-12",
-      "Telefono": 3123860654,
-      "Email": "jbernalsantiago@gmail.com"
-    }
-  ]
+  {
+    "_id": 1,
+    "ID_Cliente": 1,
+    "Nombre": "Jhon Santiago",
+    "Apellido": "Bernal Jurado",
+    "DNI": 109821901,
+    "Direccion": "Cr 6 #90-12",
+    "Telefono": 3123860654,
+    "Email": "jbernalsantiago@gmail.com"
+  }
   ```
 2. Metodo: **POST**
 
@@ -413,6 +407,30 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
     "Direccion": "Cr 3 #30-10",
     "Telefono": 3152389605,
     "Email": "felipemontaño@gmail.com"
+  }
+  ```
+3. Metodo: **PUT**
+
+- Endpoint: `/cliente/upd/:id`
+  
+  Debe cambiar el parametro `:id` por un numero
+
+  Ejemplo cuando el `id` es 6:
+
+  El body debera ser asi:
+  ```json
+  {
+    "Direccion": "Cr 4 #30-10",
+    "Telefono": 3118124321,
+    "Email": "felipe@gmail.com"
+  }
+  ```
+
+  Si se actualizan los datos correctamente deberá devolver:
+
+  ```json
+  {
+    "message": "Actualizado con exito"
   }
   ```
 
