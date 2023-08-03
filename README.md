@@ -397,6 +397,32 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
     }
   ]
   ```
+2. Metodo: **POST**
+
+- Endpoint: `/cliente/add`
+
+  El body debera ser asi:
+
+  ```json
+  {
+    "_id": 6,
+    "ID_Cliente": 6,
+    "Nombre": "Felipe",
+    "Apellido": "Montaño",
+    "DNI": 153290832,
+    "Direccion": "Cr 3 #30-10",
+    "Telefono": 3152389605,
+    "Email": "felipemontaño@gmail.com"
+  }
+  ```
+
+  Si se agregan los datos correctamente deberá devolver:
+
+  ```json
+  {
+    "message": "Agregado con exito"
+  }
+  ```
 
 ## Empleados
 

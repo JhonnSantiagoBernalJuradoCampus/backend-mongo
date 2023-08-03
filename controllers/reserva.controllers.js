@@ -11,7 +11,7 @@ const getReservaId = async (req,res)=>{
 
     const parametro = req.params.id;
 
-    const reserva = await Reserva.find({_id: {$eq: parametro}});
+    const reserva = await Reserva.findOne({_id: {$eq: parametro}});
     
     res.json(reserva);
 };

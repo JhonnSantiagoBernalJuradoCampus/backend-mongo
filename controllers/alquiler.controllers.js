@@ -11,7 +11,7 @@ const getAlquilerId = async (req,res)=>{
 
     const parametro = req.params.id;
     
-    const alquiler = await Alquiler.find({_id: {$eq: parametro}});
+    const alquiler = await Alquiler.findOne({_id: {$eq: parametro}});
 
     res.json(alquiler);
 }

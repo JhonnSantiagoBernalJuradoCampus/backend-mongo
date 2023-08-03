@@ -11,7 +11,7 @@ const getRegistroEntregaId = async (req,res)=>{
 
     const parametro = req.params.id;
 
-    const entrega = await RegistroEntregas.find({_id: parametro});
+    const entrega = await RegistroEntregas.findOne({_id: parametro});
 
     res.json(entrega);
 };

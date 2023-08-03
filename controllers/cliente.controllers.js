@@ -11,9 +11,21 @@ const getClienteId = async (req,res)=>{
     
     const parametro = req.params.id;
 
-    const cliente = await Cliente.find({_id: {$eq: parametro}});
+    const cliente = await Cliente.findOne({_id: {$eq: parametro}});
 
     res.json(cliente);
 }
 
-export {getClientes, getClienteId};
+const postCliente = async (req,res)=>{
+    
+    const cliente = await new Cliente(req.body)
+    try {
+        const nuevoCliente = await cliente.save();
+
+        res.status(201).send({message: "Agregado con exito"});
+    } catch (error) {
+        res.send({message: "Error al agregar"});
+    }
+};
+
+export {getClientes, getClienteId, postCliente};

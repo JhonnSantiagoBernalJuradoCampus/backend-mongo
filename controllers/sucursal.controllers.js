@@ -11,7 +11,7 @@ const getSucursalId = async (req,res)=>{
 
     const parametro = req.params.id;
 
-    const sucursal = await Sucursal.find({_id: {$eq: parametro}});
+    const sucursal = await Sucursal.findOne({_id: {$eq: parametro}});
 
     res.json(sucursal);
 };

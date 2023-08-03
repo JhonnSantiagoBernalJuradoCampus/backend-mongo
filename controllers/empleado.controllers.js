@@ -11,7 +11,7 @@ const getEmpleadoId = async (req,res)=>{
 
     const parametro = req.params.id;
 
-    const empleado = await Empleado.find({_id: {$eq: parametro}});
+    const empleado = await Empleado.findOne({_id: {$eq: parametro}});
 
     res.json(empleado);
 };

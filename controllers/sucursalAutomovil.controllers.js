@@ -11,7 +11,7 @@ const getSucursalAutomovilId = async (req,res)=>{
 
     const parametro = req.params.id;
 
-    const sucuAuto = await SucursalAutomovil.find({_id: {$eq: parametro}});
+    const sucuAuto = await SucursalAutomovil.findOne({_id: {$eq: parametro}});
 
     res.json(sucuAuto);
 };
