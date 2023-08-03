@@ -409,6 +409,14 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
     "Email": "felipemontaño@gmail.com"
   }
   ```
+  Si se agregan los datos correctamente deberá devolver:
+
+  ```json
+  {
+    "message": "Agregado con exito"
+  }
+  ```
+
 3. Metodo: **PUT**
 
 - Endpoint: `/cliente/upd/:id`
@@ -433,15 +441,6 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
     "message": "Actualizado con exito"
   }
   ```
-
-  Si se agregan los datos correctamente deberá devolver:
-
-  ```json
-  {
-    "message": "Agregado con exito"
-  }
-  ```
-
 ## Empleados
 
 1. Metodo: **GET**
