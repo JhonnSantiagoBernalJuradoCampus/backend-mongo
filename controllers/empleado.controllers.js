@@ -16,4 +16,16 @@ const getEmpleadoId = async (req,res)=>{
     res.json(empleado);
 };
 
-export {getEmpleados, getEmpleadoId};
+const postEmpleado = async (req,res)=>{
+
+    const empleado = await new Empleado(req.body);
+    try{
+        const nuevoEmpleado = await empleado.save();
+
+        res.status(201).send({message: "Agregado con exito"});
+    } catch(error){
+        res.send({message: "Error al agregar"});
+    }
+}
+
+export {getEmpleados, getEmpleadoId, postEmpleado};

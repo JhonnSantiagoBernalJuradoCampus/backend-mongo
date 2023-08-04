@@ -523,18 +523,41 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
   Obtener un empleado en especifico por medio del id. **Ejemplo** de dato de salida con `id`: 5
 
   ```json
-  [
-    {
-      "_id": 5,
-      "ID_Empleado": 5,
-      "Nombre": "Andres",
-      "Apellido": "Sepulveda",
-      "DNI": 65423442,
-      "Direccion": "Cr12 #12-12",
-      "Telefono": 312314322,
-      "Cargo": "Vendedor"
-    }
-  ]
+  {
+    "_id": 5,
+    "ID_Empleado": 5,
+    "Nombre": "Andres",
+    "Apellido": "Sepulveda",
+    "DNI": 65423442,
+    "Direccion": "Cr12 #12-12",
+    "Telefono": 312314322,
+    "Cargo": "Vendedor"
+  }
+  ```
+2. Metodo: **POST**
+
+- Endpoint: `/empleado/add`
+
+  El body debera ser asi:
+
+  ```json
+  {
+    "_id": 6,
+    "ID_Empleado": 6,
+    "Nombre": "Laura",
+    "Apellido": "Chacón",
+    "DNI": 1005123432,
+    "Direccion": "Cr10 #3-21",
+    "Telefono": 314523123,
+    "Cargo": "Asistente"
+  }
+  ```
+  Si se agregan los datos correctamente deberá devolver:
+
+  ```json
+  {
+    "message": "Agregado con exito"
+  }
   ```
 
 ## Registro_devoluciones
@@ -686,17 +709,15 @@ El servidor que estara utilizando es: **http://127.2.3.4:5010**
   Obtener un registro_entrega en especifico por medio del id. **Ejemplo** de dato de salida con `id`: 3
 
   ```json
-  [
-    {
-      "_id": 3,
-      "ID_Registro": 3,
-      "alquiler_id": 1,
-      "empleado_id": 1,
-      "Fecha_Entrega": "26/08/2023",
-      "Combustible_Entregado": "12,5",
-      "Kilometraje_Entregado": 100
-    }
-  ]
+  {
+    "_id": 3,
+    "ID_Registro": 3,
+    "alquiler_id": 1,
+    "empleado_id": 1,
+    "Fecha_Entrega": "26/08/2023",
+    "Combustible_Entregado": "12,5",
+    "Kilometraje_Entregado": 100
+  }
   ```
 
 ## Reservas

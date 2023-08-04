@@ -1,9 +1,10 @@
 import { Router } from "express";
-import { getEmpleados, getEmpleadoId } from "../controllers/empleado.controllers.js";
+import { getEmpleados, getEmpleadoId, postEmpleado } from "../controllers/empleado.controllers.js";
 
 const router = Router();
 
 router.get("/", getEmpleados);
 router.get("/:id", getEmpleadoId);
+router.post("/add", postEmpleado);
 
 export default router;
